@@ -21,6 +21,7 @@ app.use(helmet());
 
 app.use("/", userRouter);
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}...`);
 });
