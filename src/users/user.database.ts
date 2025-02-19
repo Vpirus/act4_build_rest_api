@@ -7,20 +7,26 @@ let users: Users = loadUsers();
 
 function loadUsers(): Users {
   try {
-    const data = fs.readFileSync("users.json", "utf-8");
+    const data = fs.readFileSync("./users.json", "utf-8");
+
+    // If the file is empty, return an empty object
+    if (!data) {
+      return {};
+    }
+
     return JSON.parse(data);
   } catch (error) {
-    console.log(`Error ${error}`);
-    return {};
+    console.log(`Error loading users: ${error}`);
+    return {}; // Return an empty object if loading fails
   }
 }
 
 function saveUsers() {
   try {
-    fs.writeFileSync("users.json", JSON.stringify(users), "utf-8");
+    fs.writeFileSync("./users.json", JSON.stringify(users), "utf-8");
     console.log(`User saved successfully!`);
   } catch (error) {
-    console.log(`Error ${error}`);
+    console.log(`Error : ${error}`);
   }
 }
 

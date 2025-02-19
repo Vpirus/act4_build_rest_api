@@ -1,0 +1,16 @@
+{
+  "productId1": {
+    "id": "productId1",
+    "name": "Wrist Watch",
+    "price": 500,
+    "quantity": 50,
+    "image": "image_url.png"
+  },
+  "productId2": {
+    "id": "productId2",
+    "name": "Smartphone",
+    "price": 1000,
+    "quantity": 30,
+    "image": "smartphone_url.png"
+  }
+}
